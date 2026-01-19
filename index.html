@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burger House</title>
+<style>
+/* ===== GLOBAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fff3e0;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* ===== HEADER & NAV ===== */
+header {
+    background: #e53935;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d32f2f;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+.nav-logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffb74d;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* HOME */
+.home img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.home h1 {
+    color: #e53935;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+
+
+/* ABOUT */
+.about h2, .contact h2 {
+    color: #e53935;
+    margin-bottom: 15px;
+}
+
+.about p {
+    line-height: 1.6;
+}
+
+/* ===== ORDER ===== */
+.order form{
+    display:grid;
+    gap:15px;
+}
+
+.order input, .order select{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+.order button{
+    padding:12px;
+    background:#ff9800;
+    color:white;
+    border:none;
+    border-radius:30px;
+    font-size:1rem;
+    cursor:pointer;
+}
+
+.order button:hover{
+    background:#f57c00;
+}
+.success{
+    display:none;
+    margin-top:15px;
+    color:green;
+    font-weight:bold;
+}
+
+/* CONTACT */
+.contact form {
+    display: grid;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact button {
+    padding: 12px;
+    border: none;
+    background: #ff9800;
+    color: white;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact button:hover {
+    background: #f57c00;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #d32f2f;
+    color: white;
+    margin-top: 40px;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-8px); }
+    60% { transform: translateY(-4px); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    section {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 10px 0 0 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Burger House ni Vons</h1>
+</header>
+
+<nav>
+    <!-- LOGO WITH ANIMATION -->
+    <div class="nav-logo">
+        <img src="https://img.icons8.com/emoji/48/000000/hamburger-emoji.png" alt="Logo">
+        Burger House Von's
+    </div>
+
+    <!-- NAV LINKS -->
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#order">Order</a>
+         <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HOME SECTION -->
+<section id="home" class="home">
+    <h1>The Daily Grind Burger Von's</h1>
+    <p>"Freshly Pressed. Perfectly Dressed."</p>
+    <img src="489121278214d55e6526e03910113abd.jpg" alt="Delicious Burger">
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about">
+    <h2>About Us</h2>
+    
+        
+<p>Our Story At The Daily Grind Burger Von's, we believe that "the grind" shouldn't just describe your workday—it should describe the freshest beef in town. We started in our own backyard with one goal: to create a burger that tastes like a Sunday afternoon cookout, but with a gourmet twist.</p>
+<p>Our Philosophy We don't believe in heat lamps or frozen patties. Every morning, we hand-press our custom blend of premium beef to ensure every bite is juicy and full of flavor. We source our vegetables from local farmers and bake our brioche buns daily because we know that a great burger is only as good as its weakest ingredient.
+</p>
+<p>Our Promise Whether you’re stopping by for a quick lunch or bringing the family in for a Friday night treat, we treat you like a guest in our own home. Come sit down, grab a napkin (you’ll need it), and taste the difference that real passion makes.</p>
+    
+ <!-- BURGER MASCOT -->
+        <img 
+            src="https://img.icons8.com/emoji/96/hamburger-emoji.png"
+            alt="Burger Mascot"
+            style="
+                width:120px;
+                animation: mascotBounce 2s infinite;
+            ">
+    </div>
+</section>
+
+<!-- ORDER -->
+<section id="order" class="order">
+    <h2>Order Now (Sample)</h2>
+    <form onsubmit="orderBurger(event)">
+        <input type="text" placeholder="Your Name" required>
+        <select required>
+            <option value="">Select Burger</option>
+            <option>Classic Burger - ₱150</option>
+            <option>Cheese Burger - ₱170</option>
+            <option>Double Patty - ₱220</option>
+        </select>
+        <input type="number" placeholder="Quantity" min="1" required>
+        <button type="submit">Place Order</button>
+    </form>
+
+    <div class="success" id="orderSuccess">
+        ✅ Your order has been placed (Sample only).
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p style="margin-bottom:10px;">📞 Phone: 09056749720</p>
+    <p style="margin-bottom:10px;">📧 Email: info@burgerhousevon's.com</p>
+    <p>📍 Address: Burger Street,Donmartin Marundan, Food City, Philippines</p>
+</section>
+
+<footer>
+    © 2025 Burger House
+</footer>
+
+<script>
+/* SAMPLE CONTACT FORM */
+function sampleForm(event) {
+    event.preventDefault();
+    alert('Thank you! This is a sample contact form.');
+    event.target.reset();
+}
+</script>
+
+</body>
+</html>
